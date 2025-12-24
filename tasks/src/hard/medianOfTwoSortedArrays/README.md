@@ -74,3 +74,7 @@ Output: 2.50000
 - Binary search is always performed on the smaller array
 - No extra memory or array merging is used
 - This is the optimal solution expected in technical interviews
+
+---
+
+[Median of Two Sorted Arrays — LeetCode](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)
