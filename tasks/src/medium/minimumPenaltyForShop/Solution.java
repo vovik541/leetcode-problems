@@ -1,4 +1,4 @@
-package hard.minimumPenaltyForShop;
+package medium.minimumPenaltyForShop;
 
 class Solution {
 
