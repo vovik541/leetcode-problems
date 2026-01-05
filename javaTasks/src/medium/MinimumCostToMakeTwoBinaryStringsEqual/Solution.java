@@ -7,8 +7,8 @@ class Solution {
     }
 
     public long minimumCost(String s, String t, int flipCost, int swapCost, int crossCost) {
-        long count01 = 0; // s[i]=0, t[i]=1
-        long count10 = 0; // s[i]=1, t[i]=0
+        long count01 = 0;
+        long count10 = 0;
 
         for (int index = 0; index < s.length(); index++) {
             char sChar = s.charAt(index);
@@ -33,7 +33,6 @@ class Solution {
         long swap = swapCost;
         long cross = crossCost;
 
-        // If swapping is not better than flipping two mismatches, never use swap/cross
         if (swap >= 2L * flip) {
             return totalMismatches * flip;
         }
@@ -41,15 +40,12 @@ class Solution {
         long pairedMismatches = Math.min(count01, count10);
         long remainingUnpaired = Math.abs(count01 - count10);
 
-        //swap for each (01+10) pair, flip the rest
         long baseCost = pairedMismatches * swap + remainingUnpaired * flip;
 
-        // Each cross+swap replaces 2 flips for the unpaired mismatches
-        // delta = (cross + swap) - 2*flip
         long replaceTwoFlipsDelta = (cross + swap) - 2L * flip;
 
         if (replaceTwoFlipsDelta < 0) {
-            long maxReplacements = remainingUnpaired / 2; // each replacement reduces unpaired by 2
+            long maxReplacements = remainingUnpaired / 2;
             baseCost += maxReplacements * replaceTwoFlipsDelta;
         }
 
