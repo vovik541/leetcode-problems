@@ -41,10 +41,10 @@ class Solution {
         long pairedMismatches = Math.min(count01, count10);
         long remainingUnpaired = Math.abs(count01 - count10);
 
-        //use swap for each (01+10) pair, flip the rest
+        //swap for each (01+10) pair, flip the rest
         long baseCost = pairedMismatches * swap + remainingUnpaired * flip;
 
-        // Each cross+swap can replace 2 flips for the unpaired mismatches
+        // Each cross+swap replaces 2 flips for the unpaired mismatches
         // delta = (cross + swap) - 2*flip
         long replaceTwoFlipsDelta = (cross + swap) - 2L * flip;
 
