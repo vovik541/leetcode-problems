@@ -1,5 +1,6 @@
 HELP.md
 .env
+contests
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
