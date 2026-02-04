@@ -5,4 +5,5 @@
 - Tags: Senior Staff, Array, Dynamic Programming
 - Source: Daily
 - Time: O(n)
-- Space: O(1)
+- Space: O(1) 
+- not completed solution (1/4)
