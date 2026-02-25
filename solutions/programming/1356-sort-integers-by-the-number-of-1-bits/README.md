@@ -4,5 +4,5 @@
 - Difficulty: Easy
 - Tags: Mid Level, Array, Bit Manipulation, Sorting, Counting
 - Source: Daily
-- Time: O()
-- Space: O()
+- Time: O(n log n)
+- Space: O(n)
