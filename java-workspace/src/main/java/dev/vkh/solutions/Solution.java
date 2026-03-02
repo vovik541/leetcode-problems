@@ -1,5 +1,5 @@
 package dev.vkh.solutions;
 
-public class Solution {
+class Solution {
   static void main() {}
 }
